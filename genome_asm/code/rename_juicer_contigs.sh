@@ -2,8 +2,8 @@
 
 #rename_juicer_contigs.sh removes low-confidence contigs/keeps only high-support contigs after Juicer (desktop) visualization
 
-in_fasta="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_280426.fasta"
-out_fasta="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_200526.fasta"
+in_fasta="/home/user/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_280426.fasta"
+out_fasta="/home/user/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_200526.fasta"
 keep_contigs=(
     contig1
     contig2

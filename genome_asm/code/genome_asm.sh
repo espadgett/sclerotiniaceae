@@ -9,9 +9,9 @@
 module load fastqc/0.12.1 samtools/1.22.1 StdEnv/2020 hifiasm/0.19.5 minimap2
 
 # FILES/PATHS
-hifi_seq="/home/padgett3/scratch/streptotinia_caulophylli/hifi_seq/Scaulophylli_fasta/Scaulophylli_hifireads.fq.gz"
-hic_R1="/home/padgett3/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_1_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz"
-hic_R2="/home/padgett3/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_2_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz"
+hifi_seq="/home/user/scratch/streptotinia_caulophylli/hifi_seq/Scaulophylli_fasta/Scaulophylli_hifireads.fq.gz"
+hic_R1="/home/user/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_1_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz"
+hic_R2="/home/user/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_2_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz"
 # ---------------------------------------------------------------------
 
 echo "Quality check fastq files with FastQC..."
@@ -37,7 +37,7 @@ awk '/^S/{print ">"$2;print $3}' SC_hifihic_l1_136homcov_190526.asm.hic.p_ctg.gf
 echo "running [dedups configuration] with hifiasm-l0 option"
 duplicate_scan/purge_dups/scripts/pd_config.py -l l0_purge \
 -n purge_dups_l0_config.json \
-/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/duplicate_scan/hifiasm_reruns/l0/SC_hifihic_l0_180526.asm.hic.p_ctg.fa \
+/home/user/scratch/streptotinia_caulophylli/hic_asm/duplicate_scan/hifiasm_reruns/l0/SC_hifihic_l0_180526.asm.hic.p_ctg.fa \
 pbfofn.txt
 #conti.json created 
 echo "running [dedups purging] with hifiasm-l0 option"
@@ -52,7 +52,7 @@ echo -e "\n[dedups] with hifiasm-l0 option complete."
 echo "running [dedups configuration] with hifiasm-l2 option"
 duplicate_scan/purge_dups/scripts/pd_config.py -l l2_purge \
 -n purge_dups_l2_config.json \
-/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/duplicate_scan/hifiasm_reruns/l2/SC_hifihic_l2_180526.asm.hic.p_ctg.fa \
+/home/user/scratch/streptotinia_caulophylli/hic_asm/duplicate_scan/hifiasm_reruns/l2/SC_hifihic_l2_180526.asm.hic.p_ctg.fa \
 pbfofn.txt
 #conti.json created 
 echo "running [dedups purging] with hifiasm-l2 option"
@@ -72,8 +72,8 @@ module load StdEnv/2020 gcc/9.3.0 python/3.10 augustus/3.5.0 hmmer/3.3.2 blast+/
 #virtual environment will be created for BUSCO and QUAST, so no need to load those modules here
 
 # FILES/PATHS
-asm="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_020326.asm.hic.p_ctg.fa"
-ref_asm="/home/padgett3/scratch/streptotinia_caulophylli/ref_genomes/Bcinerea/GCA_000143535.4_ASM14353v4_genomic.fna"
+asm="/home/user/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_020326.asm.hic.p_ctg.fa"
+ref_asm="/home/user/scratch/streptotinia_caulophylli/ref_genomes/Bcinerea/GCA_000143535.4_ASM14353v4_genomic.fna"
 #bcinerea is ref genome
 mkdir -p ~/scratch/streptotinia_caulophylli/busco/
 
@@ -84,7 +84,7 @@ virtualenv --no-download ${SLURM_TMPDIR}/busco_env
 source ${SLURM_TMPDIR}/busco_env/bin/activate
 # Install busco and its dependencies.
 pip install --no-index --upgrade pip
-pip install --no-index --requirement /home/padgett3/scratch/sunflower_genomes/busco/busco-requirements.txt
+pip install --no-index --requirement /home/user/scratch/sunflower_genomes/busco/busco-requirements.txt
 
 
 busco \
@@ -111,7 +111,7 @@ pip install --no-index --upgrade pip
 pip install --no-index quast
 
 python $SLURM_TMPDIR/quast_env/bin/quast.py \
-  -o /home/padgett3/scratch/streptotinia_caulophylli/quast/sc_hic \
+  -o /home/user/scratch/streptotinia_caulophylli/quast/sc_hic \
   "$asm" \
   -r "$ref_asm"
 	echo "QUAST complete."
@@ -126,8 +126,8 @@ bash renaming_asm.sh #bash or sbatch depending on system
 module load StdEnv/2023 gcc/12.3 rmblast hmmer trf
 
 # FILES/PATHS
-RM="/scratch/padgett3/streptotinia_caulophylli/repeatmasker_dir/RepeatMasker/RepeatMasker"
-asm="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_270426.fa"
+RM="/scratch/user/streptotinia_caulophylli/repeatmasker_dir/RepeatMasker/RepeatMasker"
+asm="/home/user/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_270426.fa"
 # ---------------------------------------------------------------------
 echo "Beginning RepeatMasker analysis for repeat annotation..."
 $RM -pa $SLURM_CPUS_PER_TASK -species ascomycota -a -inv "$asm"
@@ -140,11 +140,11 @@ echo "Beginning telomere probe scan across genome asm sequences using probe_repe
 module load python/3.14.2
 
 # FILES/PATHS
-sc_genome="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_270426.fa"
+sc_genome="/home/user/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_270426.fa"
 forward_motif="CCCTAA"
 reverse_motif="TTAGGG"
 min_rep="5"
-output_tsv="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/annotat_repeat/probe_scan.tsv"
+output_tsv="/home/user/scratch/streptotinia_caulophylli/hic_asm/annotat_repeat/probe_scan.tsv"
 # ---------------------------------------------------------------------
 echo "
 Usage:
@@ -190,9 +190,9 @@ yash --version #v1.2.2
 module load java/21.0.1
 
 # FILES/PATHS
-ASSEMBLY=/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_280426.fasta   # your indexed hifiasm fasta
-HIC_R1=/home/padgett3/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_1_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz           # Hi-C forward reads
-HIC_R2=/home/padgett3/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_2_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz           # Hi-C reverse reads
+ASSEMBLY=/home/user/scratch/streptotinia_caulophylli/hic_asm/Scaulophylli_280426.fasta   # your indexed hifiasm fasta
+HIC_R1=/home/user/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_1_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz           # Hi-C forward reads
+HIC_R2=/home/user/scratch/streptotinia_caulophylli/hic_raw/Scaulophylli_hic/23JWGJLT4_6_2_CAGCGATT-TCAGCCTT_150bp_St.concat.fastq.gz           # Hi-C reverse reads
 SAMPLE=Scaulophylli_140526 #output file naming
 OUTDIR=yahs_out
 
@@ -310,7 +310,7 @@ sort -k2,2d -k6,6d \
 echo "juicer.txt lines: $(wc -l < ${OUTDIR}/${SAMPLE}_juicer.txt)"
 
 # Step 3: Run juicer_tools with the fully-written liftover file
-java -jar /home/padgett3/projects/def-mtodesco/epadgett/bin/juicer/CPU/common/juicer_tools.jar pre \
+java -jar /home/user/projects/investigator/user/bin/juicer/CPU/common/juicer_tools.jar pre \
     --threads ${THREADS} \
     ${OUTDIR}/${SAMPLE}_juicer.txt \
     ${OUTDIR}/${SAMPLE}.hic \
@@ -415,7 +415,7 @@ cut -f1,2 $OUTDIR/${SAMPLE}_scaffolds_renamed.fa.fai \
 # Step 7: Run juicer_tools pre
 echo "[$(date)] Running juicer_tools pre..."
 
-java -jar /home/padgett3/projects/def-mtodesco/epadgett/bin/juicer/CPU/common/juicer_tools.jar pre \
+java -jar /home/user/projects/investigator/user/bin/juicer/CPU/common/juicer_tools.jar pre \
     ${OUTDIR}/${SAMPLE}_juicer_sorted.txt \
     ${OUTDIR}/${SAMPLE}.hic \
     ${OUTDIR}/${SAMPLE}_chrom.sizes

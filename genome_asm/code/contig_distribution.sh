@@ -2,7 +2,7 @@
 
 #contig_distribution.sh to assess how contig length varies across assembly - ideally concentrated primarily within chromosome-level scaffolds
 
-asm="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_020326.asm.hic.p_ctg.fa"
+asm="/home/user/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_020326.asm.hic.p_ctg.fa"
 
 awk '
   /^>/ {

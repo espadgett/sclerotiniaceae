@@ -8,12 +8,12 @@
 # - NAMED BY DESC LENGTH
 # ---------------------------------------------------------------------
 
-sc_asm="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_020326.asm.hic.p_ctg.fa" #input genome asm (HiC + HiFi, assembled by hifiasm)
-sorted_sc_asm="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_200426.sizesorted.fa"
-sorted_renamed_sc_asm="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm//SC_hifihic_200426.sizesorted.renamed.fa"
-seqlen="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/sc_contig_len.sorted.renamed.txt"
+sc_asm="/home/user/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_020326.asm.hic.p_ctg.fa" #input genome asm (HiC + HiFi, assembled by hifiasm)
+sorted_sc_asm="/home/user/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_200426.sizesorted.fa"
+sorted_renamed_sc_asm="/home/user/scratch/streptotinia_caulophylli/hic_asm//SC_hifihic_200426.sizesorted.renamed.fa"
+seqlen="/home/user/scratch/streptotinia_caulophylli/hic_asm/sc_contig_len.sorted.renamed.txt"
 
-cd "/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/"
+cd "/home/user/scratch/streptotinia_caulophylli/hic_asm/"
 #sort contigs by size
 awk '/^>/ {printf("%s%s\t", (N>0?"\n":""), $0); N++; next;} {printf("%s", $0);} END {printf("\n");}' "$sc_asm" \
 | awk -F '\t' '{printf("%d\t%s\n", length($2), $0);}' \
@@ -66,7 +66,7 @@ awk '
 # - NAMED BY REFERENCE SYNTENY
 # - REORDER BY DESCENDING CONTIG/SCAFFOLD NUMBER
 # ---------------------------------------------------------------------
-INPUT="/home/padgett3/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_200426.sizesorted.renamed.fa"
+INPUT="/home/user/scratch/streptotinia_caulophylli/hic_asm/SC_hifihic_200426.sizesorted.renamed.fa"
 OUTPUT="Scaulophylli_270426.fa"
 SEQLEN="Scaulophylli_270426_contiglen.txt"
 
@@ -191,7 +191,7 @@ END {
         printf "%s", sequences[names[i]]
     }
 }
-' "$TMP1" > "$TMP2"
+' "$TMP1" > "$TMP2"investigator
  
 mv "$TMP2" "$OUTPUT"
 rm -f "$TMP1"
