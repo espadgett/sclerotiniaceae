@@ -129,6 +129,7 @@ Referenced code
 **go_enrichment.R**: clusterProfiler GO enrichment plot
 
 **kegg.R**: KO term enrichment
+
 ![alt text](supp_materials/effector_annotation/keggenrichmentbar_sminor.png)
 
 **funannotate_filter.sh**: see above
