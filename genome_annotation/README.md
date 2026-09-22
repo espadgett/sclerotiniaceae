@@ -16,6 +16,7 @@
 - synteny analysis -> *genespace_initialize.sh/genespace_run.R/riparian_plot_visualization.R*
 - phylogenetic tree -> *riparian_visualization.R*
 
+![alt text](genome_annotation/phylogeny/figure/Fig.3MT.pdf)
 FIGURE Synteny and phylogenetic tree of Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea
 
 **secretome**: Detect effector elements from Funannotate proteins annotations and scan for major virulence genes. The effector annotation pipeline largely filters based on structural prediction (SignalP, Phobius (optional), NetGPI) and known effector sequence motifs (EffectorP, PHI-DB). Functional annotation of effector candidates are provided in **annotation_data/funannotate**.
