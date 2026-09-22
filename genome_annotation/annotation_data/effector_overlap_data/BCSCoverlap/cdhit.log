@@ -1,0 +1,45 @@
+================================================================
+Program: CD-HIT, V4.8.1 (+OpenMP), Aug 25 2025, 20:23:19
+Command: cd-hit -i
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/BCSCoverlap/combined.fasta
+         -o
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/BCSCoverlap/clustered
+         -c 0.7 -n 5 -T 8 -M 800 -d 0 -g 1
+
+Started: Sun Jul 26 17:43:33 2026
+================================================================
+                            Output                              
+----------------------------------------------------------------
+Warning: from file "/home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/BCSCoverlap/combined.fasta",
+Discarding invalid sequence or sequence without identifier and description!
+
+>ATZ58875.1
+NIPRISTSFHYSSPTDFRLTTEHPINTSIPCTNNLATTARNAPHYLNLHIAPTASHAQIVHAYRMHVLALHPDKLSAYYRKLTNRKPENGGRDIDDRDMETRLAAARRAYELVRLAWKVLGSSDRRKHYTSFNYYLHDENSDGRDKDKKRQHGRGGGIEEEEEEHEEITTGPWLETYGNSPIDIACRNWTIGAKKLGDWKCWELMSRRMWTTILRDELNRRRIAWEDDGSPLPYPLREEGIGNLSPRDLMAYSYQELEEQRKPWFSTYELISEDERMRRSTSTMGWVNAIHFVVDNLFPEKFSDWVWMMAERRRLGGRVETGLVEKKWQFWEGCNMFEVDVRVRGGKNDGDTLIGEGKDKWSMRRSDTRWETLGEELFSLDSSLFLMSPGIVILGLLIWGAWVLGKRMWVIMELKDKGKFQIQRVMAWLPERREMKKRNETKKKNETKKRNETKKKNEMKKREMTQKREVTQKREVTQKEGDCIMGTWKRDRDLMRKTDAEKTGEDDGIKPNGESKQHRRNINYSDEEETKSQEMESASDIESEIYDTQENDDMSDRDSASGVTILSRVSDGMRAKKSRT>SCAULOPHYLLI_000004-T1 SCAULOPHYLLI_000004 | Cytoplasmic effector probability: 0.671
+AEASRPRGVGPEFAKFYKSTDKFTCLSNPSISIDISKVNDDYCDCPDGSDEPGTSACTYLSNLSPPQPLQGTTGSSPHNTSLALPGYYCKNKGHIPTYVPFTYVNDGVCDYELCCDGSDEWENVGGTKCADKCAEIGKEWRRLDDIRTKAQVKANRKRDELVNEAQRLRADVQMSIGRKELEISQLEKKEEELKQKYEEVERRERGKVVNTSEGKTSKVSILTSMAKTRIVELRDALIGVQAKKVALQNKVDELEGILARFKEERNPNFNDEGVKRAVKAWEDYAATKDASEAEDTESQDAAVYETAKAENDGIEWEIWENDEEESDIDALYKFEEYLPESIRAWVHQKVTDLRIILIENGILADNANSGSESKAVQNARNAYQDVSDDVGVKQNALSDLKSDLEKDYGVDDIFRALKGSCVSKDSGEYDYELCWMEKTSQKSKKGGGSTGMGNFVRFDKIEVDEEVDAEGKGLGKGIRTTLVYENGQHCWNGPNRATTVVLACAEKDEIWKVVEMEKCNYRMDVGTPAVCERVVKGGPKKDVKDEL
+total seq: 671
+longest and shortest : 730 and 28
+Total letters: 162698
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 0M
+Buffer          : 8 X 10M = 85M
+Table           : 2 X 65M = 130M
+Miscellaneous   : 0M
+Total           : 216M
+
+Table limit with the given memory limit:
+Max number of representatives: 1417933
+Max number of word counting entries: 72975763
+
+# comparing sequences from          0  to        671
+---------- new table with      453 representatives
+
+      671  finished        453  clusters
+
+Approximated maximum memory consumption: 217M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0.16

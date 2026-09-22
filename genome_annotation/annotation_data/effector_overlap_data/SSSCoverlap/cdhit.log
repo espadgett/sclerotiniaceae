@@ -1,0 +1,45 @@
+================================================================
+Program: CD-HIT, V4.8.1 (+OpenMP), Aug 25 2025, 20:23:19
+Command: cd-hit -i
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSSCoverlap/combined.fasta
+         -o
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSSCoverlap/clustered
+         -c 0.7 -n 5 -T 8 -M 800 -d 0 -g 1
+
+Started: Sun Jul 26 17:48:06 2026
+================================================================
+                            Output                              
+----------------------------------------------------------------
+Warning: from file "/home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSSCoverlap/combined.fasta",
+Discarding invalid sequence or sequence without identifier and description!
+
+>APA16360.1
+FPAPEAAVGDPNAVIAPSVETHFSGQFDATGALVAKEDNETDQALQKRIAPVVVVAGIAAIKGIAILTKIAVEIGQQTIANLGKWNETREKFTQATTLAMWNRNPDYNKFPAVACYNKGYHLRNPSGQDGRVSAKLSLGMLNTDYDCLYMTGNNAFYTHNEGGYINLSYRYNGGRCTFDKRTGDLTCR>SCAULOPHYLLI_000004-T1 SCAULOPHYLLI_000004 | Cytoplasmic effector probability: 0.671
+AEASRPRGVGPEFAKFYKSTDKFTCLSNPSISIDISKVNDDYCDCPDGSDEPGTSACTYLSNLSPPQPLQGTTGSSPHNTSLALPGYYCKNKGHIPTYVPFTYVNDGVCDYELCCDGSDEWENVGGTKCADKCAEIGKEWRRLDDIRTKAQVKANRKRDELVNEAQRLRADVQMSIGRKELEISQLEKKEEELKQKYEEVERRERGKVVNTSEGKTSKVSILTSMAKTRIVELRDALIGVQAKKVALQNKVDELEGILARFKEERNPNFNDEGVKRAVKAWEDYAATKDASEAEDTESQDAAVYETAKAENDGIEWEIWENDEEESDIDALYKFEEYLPESIRAWVHQKVTDLRIILIENGILADNANSGSESKAVQNARNAYQDVSDDVGVKQNALSDLKSDLEKDYGVDDIFRALKGSCVSKDSGEYDYELCWMEKTSQKSKKGGGSTGMGNFVRFDKIEVDEEVDAEGKGLGKGIRTTLVYENGQHCWNGPNRATTVVLACAEKDEIWKVVEMEKCNYRMDVGTPAVCERVVKGGPKKDVKDEL
+total seq: 551
+longest and shortest : 795 and 32
+Total letters: 144156
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 0M
+Buffer          : 8 X 10M = 85M
+Table           : 2 X 65M = 130M
+Miscellaneous   : 0M
+Total           : 216M
+
+Table limit with the given memory limit:
+Max number of representatives: 1380681
+Max number of word counting entries: 72968219
+
+# comparing sequences from          0  to        551
+---------- new table with      419 representatives
+
+      551  finished        419  clusters
+
+Approximated maximum memory consumption: 217M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0.14

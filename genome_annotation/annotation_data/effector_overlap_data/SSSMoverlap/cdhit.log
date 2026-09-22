@@ -1,0 +1,45 @@
+================================================================
+Program: CD-HIT, V4.8.1 (+OpenMP), Aug 25 2025, 20:23:19
+Command: cd-hit -i
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/for_weijie/effectoroverlap/SSSMoverlap/combined.fasta
+         -o
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSSMoverlap/clustered
+         -c 0.7 -n 5 -T 8 -M 800 -d 0 -g 1
+
+Started: Sun Jul 26 17:35:04 2026
+================================================================
+                            Output                              
+----------------------------------------------------------------
+Warning: from file "/home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSSMoverlap/combined.fasta",
+Discarding invalid sequence or sequence without identifier and description!
+
+>APA16360.1
+FPAPEAAVGDPNAVIAPSVETHFSGQFDATGALVAKEDNETDQALQKRIAPVVVVAGIAAIKGIAILTKIAVEIGQQTIANLGKWNETREKFTQATTLAMWNRNPDYNKFPAVACYNKGYHLRNPSGQDGRVSAKLSLGMLNTDYDCLYMTGNNAFYTHNEGGYINLSYRYNGGRCTFDKRTGDLTCR>SMINOR_000011-T1 SMINOR_000011 | Apoplastic effector probability: 0.815 | Cytoplasmic effector probability: 0.525
+DTGELYILANCYNNVTSASYASAFWYYPDFLPDFPEPQAVAVISAKKAVTFEGLSIGTKTPFKLTTTIPKNAKSAAYQEVVASATISSFAGPAAAVKGTGLAFYSPSTDVNCYNEYYVRDNQVEEDP
+total seq: 562
+longest and shortest : 795 and 32
+Total letters: 147568
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 0M
+Buffer          : 8 X 10M = 85M
+Table           : 2 X 65M = 130M
+Miscellaneous   : 0M
+Total           : 216M
+
+Table limit with the given memory limit:
+Max number of representatives: 1367730
+Max number of word counting entries: 72967613
+
+# comparing sequences from          0  to        562
+---------- new table with      361 representatives
+
+      562  finished        361  clusters
+
+Approximated maximum memory consumption: 216M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0.16

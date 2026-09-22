@@ -1,0 +1,39 @@
+================================================================
+Program: CD-HIT, V4.8.1 (+OpenMP), Aug 25 2025, 20:23:19
+Command: cd-hit -i
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/70aaoverlap/combined.fasta
+         -o
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/70aaoverlap/clustered
+         -c 0.7 -n 5 -T 8 -M 800 -d 0 -g 1
+
+Started: Tue Jun 30 10:28:52 2026
+================================================================
+                            Output                              
+----------------------------------------------------------------
+total seq: 499
+longest and shortest : 732 and 36
+Total letters: 132624
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 0M
+Buffer          : 8 X 10M = 85M
+Table           : 2 X 65M = 130M
+Miscellaneous   : 0M
+Total           : 216M
+
+Table limit with the given memory limit:
+Max number of representatives: 1343073
+Max number of word counting entries: 72984664
+
+# comparing sequences from          0  to        499
+---------- new table with      383 representatives
+
+      499  finished        383  clusters
+
+Approximated maximum memory consumption: 216M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0.11

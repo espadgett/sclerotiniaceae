@@ -1,0 +1,45 @@
+================================================================
+Program: CD-HIT, V4.8.1 (+OpenMP), Aug 25 2025, 20:23:19
+Command: cd-hit -i
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSBCoverlap/combined.fasta
+         -o
+         /home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSBCoverlap/clustered
+         -c 0.7 -n 5 -T 8 -M 800 -d 0 -g 1
+
+Started: Sun Jul 26 17:45:04 2026
+================================================================
+                            Output                              
+----------------------------------------------------------------
+Warning: from file "/home/user/scratch/streptotinia_caulophylli/hic_asm/effectoroverlap/SSBCoverlap/combined.fasta",
+Discarding invalid sequence or sequence without identifier and description!
+
+>APA16360.1
+FPAPEAAVGDPNAVIAPSVETHFSGQFDATGALVAKEDNETDQALQKRIAPVVVVAGIAAIKGIAILTKIAVEIGQQTIANLGKWNETREKFTQATTLAMWNRNPDYNKFPAVACYNKGYHLRNPSGQDGRVSAKLSLGMLNTDYDCLYMTGNNAFYTHNEGGYINLSYRYNGGRCTFDKRTGDLTCR>ATZ45211.1 hypothetical protein BCIN_01g00320 [Botrytis cinerea B05.10] | Cytoplasmic effector probability: 0.697
+HLIHLTSSHPSYFTVSQHRITLDHCTVLPFFTSYIVSNNTAYKPTSTPQMSFFSKIKHTKKTIEEKKAKLTAEEEAVKVPYKHVPTHAAFDALFGAPSTWKQEDRPKIIAHNKERSQKTINRSHSTFSTVSSMKATADYTPRASSRDRYNPTWNSRIEHVSYFDAINRSMAPPPIKTEVPITPDSAVGMSPSSSLPQSEVASQSASPENSKVPSSSSSSTSLGLEIGASAPRRPLPSDAFEHQAVAFPNDNILQRLHKSTTRKLGEAPILKAPIVEVQVPKPVVVTPVVQRKSRWSRMGKQNGEPTKD
+total seq: 736
+longest and shortest : 795 and 28
+Total letters: 178588
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 0M
+Buffer          : 8 X 10M = 85M
+Table           : 2 X 65M = 130M
+Miscellaneous   : 0M
+Total           : 216M
+
+Table limit with the given memory limit:
+Max number of representatives: 1420818
+Max number of word counting entries: 72958208
+
+# comparing sequences from          0  to        736
+---------- new table with      499 representatives
+
+      736  finished        499  clusters
+
+Approximated maximum memory consumption: 217M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0.17
