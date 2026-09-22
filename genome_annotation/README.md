@@ -102,28 +102,28 @@ St_cau_sc_51 36738 #scaffold6
 
 Referenced code
 
-** genespace_initialize.sh**: creates environment/input structure for GENESPACE ortholog-based synteny calculation using the outputs of Funannotate (see README.md). For annotation data deposition, see associated publication.
-** genespace_run.R**: run GENESPACE, very mem/time intensive. Recommended to run in an interactive R environment on HPC.
-** riparian_plot_visualization.R**: still in an interactive R environment, load the GENESPACE output to create a riparian plot. Funannotate reorders contigs, requiring script correction.
-** effector_annotation.sh**: annotate effector candidates from structural and sequence motifs, filtering Funannotate protein.fasta
+**genespace_initialize.sh**: creates environment/input structure for GENESPACE ortholog-based synteny calculation using the outputs of Funannotate (see README.md). For annotation data deposition, see associated publication.
+**genespace_run.R**: run GENESPACE, very mem/time intensive. Recommended to run in an interactive R environment on HPC.
+**riparian_plot_visualization.R**: still in an interactive R environment, load the GENESPACE output to create a riparian plot. Funannotate reorders contigs, requiring script correction.
+**effector_annotation.sh**: annotate effector candidates from structural and sequence motifs, filtering Funannotate protein.fasta
 ** oa_scan.sh**: scanning protein.fasta of Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea for virulence genes. 
-** overlap_parse.sh**: assess the uniqueness of effector sets between species, two at a time, by comparing two protein FASTA files using CD-HIT at 90% identity.
+**overlap_parse.sh**: assess the uniqueness of effector sets between species, two at a time, by comparing two protein FASTA files using CD-HIT at 90% identity.
 	*Usage*
 	```overlap_parse.sh <fasta1> <fasta2> [identity] [threads] [outdir]```
-** filter_gff3.sh**: extract effectors from whole genome GFF3. Insert full paths or alternatively:
+**filter_gff3.sh**: extract effectors from whole genome GFF3. Insert full paths or alternatively:
 	*Usage*
 	```filter_gff3.sh -g input.gff3 -i ids.txt -o filtered.gff3```
-** filter_gff3to_go.sh**: extracts the GO terms from the Funannotate-ouput GFF3 file and output a two-column TSV (#   gene_id <TAB> GO:XXXXXXX).
+**filter_gff3to_go.sh**: extracts the GO terms from the Funannotate-ouput GFF3 file and output a two-column TSV (#   gene_id <TAB> GO:XXXXXXX).
 	*Usage*
 	```filter_gff3_to_go.sh phi_pos.gff3 > phi_pos_go.tsv``
-** gene_density.R**: taking the funannotate output GFF3, visualize the density of the genes (genes/Mb) across chromosomes. Bin size in image is set as 1 Mb, but is customizable.
-** go_enrichment.R**: clusterProfiler GO enrichment plot
+**gene_density.R**: taking the funannotate output GFF3, visualize the density of the genes (genes/Mb) across chromosomes. Bin size in image is set as 1 Mb, but is customizable.
+**go_enrichment.R**: clusterProfiler GO enrichment plot
 
 FIGURE GO term enrichment for S. minor and S. caulophylli highest-confidence effector candidates
 
-** kegg.R**: KO term enrichment
-** funannotate_filter.sh**: see above
-** filtered_stats.sh**: summary statistics for filtered annotations
+**kegg.R**: KO term enrichment
+**funannotate_filter.sh**: see above
+**filtered_stats.sh**: summary statistics for filtered annotations
 
 END of README
 
