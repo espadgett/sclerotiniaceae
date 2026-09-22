@@ -29,10 +29,15 @@
 
 
 Referenced code
+
 **renaming_asm**: reorders the hifiasm-output assembly scaffolds in harmony with the B. cinerea contigs, determined by ortholog synteny
+
 **probe_repeat_scan.py**: script uses a telomere probe used during wet lab visualization/tracking of chromosomes, applied against genome asm sequences
+
 **rename_juicer_contigs.sh**: after Juicer (Desktop) visualization, remove low-confidence contigs
+
 **dotplot.sh**: visualize genome asm (contig-alignment)
+
 **cumulative_contig_distribution_plot.R**: visualizes the distribution of contigs by length, and add the cumulative contribution to genome asm length
 
 END of README
