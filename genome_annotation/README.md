@@ -7,19 +7,20 @@
 
 ### Code contained in the *genome_annotation* folder:
 
-**annotation_data**: supplementary data for the annotation analyses
+####**annotation_data**: supplementary data for the annotation analyses
 - effector_overlap_data: details about effector protein similarities between species
 - oascan_data: closest protein hits for OAH and ODC2 genes
 - funannotate: Funannotate results **and effector protein annotations**, derived from Funannotate protein fasta
 
-**phylogeny folder**: scripts to use ortholog gene annotations to create phylogenetic trees and synteny plots across Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea
+####**phylogeny**: scripts to use ortholog gene annotations to create phylogenetic trees and synteny plots across Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea
 - synteny analysis -> *genespace_initialize.sh/genespace_run.R/riparian_plot_visualization.R*
 - phylogenetic tree -> *riparian_visualization.R*
+
 **figure subfolder**: contains figure file for Figure 1
 
 FIGURE Synteny and phylogenetic tree of Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea
 
-**secretome**: Detect effector elements from Funannotate proteins annotations and scan for major virulence genes. The effector annotation pipeline largely filters based on structural prediction (SignalP, Phobius (optional), NetGPI) and known effector sequence motifs (EffectorP, PHI-DB). Functional annotation of effector candidates are provided in **annotation_data/funannotate**.
+####**secretome**: Detect effector elements from Funannotate proteins annotations and scan for major virulence genes. The effector annotation pipeline largely filters based on structural prediction (SignalP, Phobius (optional), NetGPI) and known effector sequence motifs (EffectorP, PHI-DB). Functional annotation of effector candidates are provided in **annotation_data/funannotate**.
 - effector annotation from Funannotate outputs -> *effector_annotation.sh*
 - scanning for major virulence genes OAH and OCD2 -> *oa_scan.sh*
 - effector similarity across species -> *overlap_parse.sh*
@@ -60,7 +61,7 @@ APSSSRTFDYTAGDVGYIPASNSHYIENTGTEDVVFLEVLQQPVFSDISVAQWLALTPRQVVKDTLGLPDDVIDSLPHEK
 TLIKVGNRNMTALAADEKGSGAYE
 ```
 
-**supplementary annotation analyses**
+####**supp_materials**: supplementary annotation analyses
 - track gene density across genomes -> *gene_density.R*
 
 FIGURE Gene density in Streptotinia caulophylli
@@ -104,7 +105,7 @@ St_cau_sc_51 36738 #scaffold6
 
 
 
-Referenced code
+####Referenced code
 ** genespace_initialize.sh**: creates environment/input structure for GENESPACE ortholog-based synteny calculation using the outputs of Funannotate (see README.md). For annotation data deposition, see associated publication.
 ** genespace_run.R**: run GENESPACE, very mem/time intensive. Recommended to run in an interactive R environment on HPC.
 ** riparian_plot_visualization.R**: still in an interactive R environment, load the GENESPACE output to create a riparian plot. Funannotate reorders contigs, requiring script correction.
