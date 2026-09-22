@@ -10,7 +10,7 @@
 **annotation_data**: supplementary data for the annotation analyses
 - effector_overlap_data: details about effector protein similarities between species
 - oascan_data: closest protein hits for OAH and ODC2 genes
-- funannotate: Funannotate results **and effector protein annotations**, derived from Funannotate protein fasta
+- annotations: Funannotate results and effector protein annotations, derived from Funannotate protein fasta
 
 **phylogeny**: scripts to use ortholog gene annotations to create phylogenetic trees and synteny plots across Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea
 - synteny analysis -> *genespace_initialize.sh/genespace_run.R/riparian_plot_visualization.R*
