@@ -16,7 +16,7 @@
 - synteny analysis -> *genespace_initialize.sh/genespace_run.R/riparian_plot_visualization.R*
 - phylogenetic tree -> *riparian_visualization.R*
 
-![alt text](genome_annotation/phylogeny/figure/Fig.3MT.png)
+![alt text](phylogeny/figure/Fig.3MT.png)
 
 FIGURE Synteny and phylogenetic tree of Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea
 
