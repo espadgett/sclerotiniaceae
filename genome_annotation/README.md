@@ -18,8 +18,6 @@
 
 ![alt text](phylogeny/figure/Fig.3MT.png)
 
-FIGURE Synteny and phylogenetic tree of Sclerotinia sclerotiorum, S. minor, Streptotinia caulophylli, and Botrytis cinerea
-
 **secretome**: Detect effector elements from Funannotate proteins annotations and scan for major virulence genes. The effector annotation pipeline largely filters based on structural prediction (SignalP, Phobius (optional), NetGPI) and known effector sequence motifs (EffectorP, PHI-DB). Functional annotation of effector candidates are provided in **annotation_data/funannotate**.
 - effector annotation from Funannotate outputs -> *effector_annotation.sh*
 - scanning for major virulence genes OAH and OCD2 -> *oa_scan.sh*
@@ -64,7 +62,7 @@ TLIKVGNRNMTALAADEKGSGAYE
 **supp_materials**: supplementary annotation analyses
 - track gene density across genomes -> *gene_density.R*
 
-FIGURE Gene density in Streptotinia caulophylli
+![alt text](supp_materials/gene_density_figure.png)
 
 **effector_annotation**: additional annotations on the highest-confidence effectors (containing PHI-DB annotations)
 - BLASTKoala (web server) KO annotations/KEGG annotations -> *kegg.R*
@@ -130,9 +128,9 @@ Referenced code
 
 **go_enrichment.R**: clusterProfiler GO enrichment plot
 
-FIGURE GO term enrichment for S. minor and S. caulophylli highest-confidence effector candidates
-
 **kegg.R**: KO term enrichment
+
+![alt text](supp_materials/effector_annotation/keggenrichmentbar_sminor.png)
 
 **funannotate_filter.sh**: see above
 
