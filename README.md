@@ -23,7 +23,7 @@ Genome assembly and manual curation using HiFi and HiC sequences of Streptotinia
 
 ### Genome annotation
 
-Analyses of genome annotation (gene and protein features), following complete genome assembly in *genome_asm* folder. 
+Analyses of genome annotation (gene and protein features), following complete genome assembly in *genome_asm* folder. Analyses are stored in folders **phylogeny, secretome, supp_materials**, but additional data is available in **annotation_data**.
 
 **Snippet of code contained in the *genome_annotation* folder:**
 
@@ -32,7 +32,7 @@ Analyses of genome annotation (gene and protein features), following complete ge
 	- synteny analysis -> *genespace_initialize.sh/genespace_run.R/riparian_plot_visualization.R*
 	- phylogenetic tree -> *riparian_visualization.R*
 
-![alt text](phylogeny/figure/Fig.3MT.png)
+![alt text](genome_annotation/phylogeny/figure/Fig.3MT.png)
 
 	**secretome**
 
@@ -41,7 +41,7 @@ Analyses of genome annotation (gene and protein features), following complete ge
 
 	- track gene density across genomes -> *gene_density.R*
 
-![alt text](supp_materials/gene_density_figure.png)
+![alt text](genome_annotation/supp_materials/gene_density_figure.png)
 
 ### NHCC
 
