@@ -1,4 +1,4 @@
-# sclerotinia_minor_streptotinia_caulophylli
+# Genomic analysis of *Sclerotinia minor* and *Streptotinia caulophylli*, and their virulence Sclerotiniaceae relatives
 
 Methodology scripts pertaining to the chromosome-level genome assemblies and annotations of S. minor and St. caulophylli.
 
@@ -26,13 +26,19 @@ Genome assembly and manual curation using HiFi and HiC sequences of Streptotinia
 Analyses of genome annotation (gene and protein features), following complete genome assembly in *genome_asm* folder. 
 
 **Snippet of code contained in the *genome_annotation* folder:**
+
 	**phylogeny**
+
 	- synteny analysis -> *genespace_initialize.sh/genespace_run.R/riparian_plot_visualization.R*
 	- phylogenetic tree -> *riparian_visualization.R*
+
 ![alt text](phylogeny/figure/Fig.3MT.png)
+
 	**secretome**
+
 	- effector annotation from Funannotate outputs -> *effector_annotation.sh*
 	**supp_materials**
+
 	- track gene density across genomes -> *gene_density.R*
 
 ![alt text](supp_materials/gene_density_figure.png)
