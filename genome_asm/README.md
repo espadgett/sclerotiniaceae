@@ -24,7 +24,7 @@
 
 **supplementary asm analyses**
 - dot plot -> *dotplot.sh*
-- contain distribution plot -> *cumulative_contig_distribution_plot.R*
+- contig distribution plot -> *cumulative_contig_distribution_plot.R*
 
 
 

@@ -6,14 +6,47 @@ Methodology scripts pertaining to the chromosome-level genome assemblies and ann
 Padgett, Esme (PhD Student, UBC) - esme.padgett@msl.ubc.ca
 Todesco, Marco (PhD, Assistant Prof, **Princinple Investigator**, UBC) - mtodesco@msl.ubc.ca
 
-### Repo contents
-**genome_asm** - Genome assembly details for St. caulophylli, using HiC/HiFi sequence inputs.
+## Repo contents
+### Genome assembly
 
-**genome_annotation** - Genome annotation scripts for gene/protein/CDS annotations. 
-	*secretome* subdirectory contains further workflow for effector protein annotation, from genome protein annotation.
-	*phylogeny* subdirectory documents the use of ortholog gene annotations to create phylogenetic tree.
+Genome assembly and manual curation using HiFi and HiC sequences of Streptotinia caulophylli
 
-**nhcc** Transformation of HiC sequencing data with SIGNATURE pipeline from DOI: 10.1038/s41467-024-53983-y
+**Snippet of code contained in the *genome_asm* folder:**
 
+- hifiasm assembly -> genome_asm.sh
+- repeat annotation -> *renaming_asm.sh*
+- telomere annotation -> *probe_repeat_scan.py*
+- YaHS + Juicer HiC visualization -> *rename_juicer_contigs.sh*
+- contig distribution plot -> *cumulative_contig_distribution_plot.R*
+
+![alt text](genome_asm/figure/cumul_contig_dist.png)
+
+### Genome annotation
+
+Analyses of genome annotation (gene and protein features), following complete genome assembly in *genome_asm* folder. 
+
+**Snippet of code contained in the *genome_annotation* folder:**
+	**phylogeny**
+	- synteny analysis -> *genespace_initialize.sh/genespace_run.R/riparian_plot_visualization.R*
+	- phylogenetic tree -> *riparian_visualization.R*
+![alt text](phylogeny/figure/Fig.3MT.png)
+	**secretome**
+	- effector annotation from Funannotate outputs -> *effector_annotation.sh*
+	**supp_materials**
+	- track gene density across genomes -> *gene_density.R*
+
+![alt text](supp_materials/gene_density_figure.png)
+
+### NHCC
+
+Transformation of HiC sequencing data to detect non-homologous chromosome contacts (NHCC), to determine if there are biased interactions among non-normally sorting fungal chromosomes, using SIGNATURE pipeline from DOI: 10.1038/s41467-024-53983-y
+
+**Snippet of code contained in the *nhcc* folder:**
+
+- HiC data preprocessing and normalization -> *signature_preprocessing.sh/custom_coolerdumpToSignature.py*
+- running SIGNATURE pipeline -> *custom_batch_create_signature_files.sh*
+- visualization -> *nhccheatmap_visualization.R*
+
+![alt text](nhcc/figure/6.png)
 
 END of README
