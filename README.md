@@ -4,6 +4,7 @@ Methodology scripts pertaining to the chromosome-level genome assemblies and ann
 
 ### Key contacts/authors:
 Padgett, Esme (PhD Student, UBC) - esme.padgett@msl.ubc.ca
+
 Todesco, Marco (PhD, Assistant Prof, **Princinple Investigator**, UBC) - mtodesco@msl.ubc.ca
 
 ## Repo contents
@@ -45,7 +46,7 @@ Analyses of genome annotation (gene and protein features), following complete ge
 
 ### NHCC
 
-Transformation of HiC sequencing data to detect non-homologous chromosome contacts (NHCC), to determine if there are biased interactions among non-normally sorting fungal chromosomes, using SIGNATURE pipeline from DOI: 10.1038/s41467-024-53983-y
+Transformation of HiC sequencing data to detect non-homologous chromosome contacts (NHCC), to determine if there are biased interactions among non-normally sorting fungal chromosomes, using the **SIGNATURE** pipeline from DOI: 10.1038/s41467-024-53983-y
 
 **Snippet of code contained in the *nhcc* folder:**
 
